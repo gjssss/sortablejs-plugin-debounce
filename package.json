@@ -16,6 +16,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:es-test": "vite build --config ./test/es/vite.config.js",
     "preview": "vite preview"
   },
   "devDependencies": {
