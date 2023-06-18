@@ -19,6 +19,18 @@
         </ul>
     </div>
 </body>
-<script type="module" src="../../dist/sortablejs-plugin-debounce.js"></script>
+<script type="module">
+    import Sortable from 'https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/+esm'
+    import { DebouncePlugin } from '../../dist/sortablejs-plugin-debounce.es.js'
+
+    Sortable.mount(new DebouncePlugin());
+
+    new Sortable(document.getElementById("list"), {
+        animation: 150,
+        debounce: true,
+        debounceTimeout: 300,
+        shakeRange: 3,
+    });
+</script>
 
 </html>

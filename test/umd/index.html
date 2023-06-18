@@ -4,11 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>debounce plugin</title>
 </head>
 
 <body>
-
+    <div>
+        <ul id="list">
+            <li>123</li>
+            <li>456</li>
+            <li>789</li>
+            <li>123</li>
+            <li>456</li>
+            <li>789</li>
+        </ul>
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="../../dist/sortablejs-plugin-debounce.umd.js"></script>
+<script>
+    Sortable.mount(new SortablejsDebounce.DebouncePlugin());
+
+    new Sortable(document.getElementById("list"), {
+        animation: 150,
+        debounce: true,
+        debounceTimeout: 300,
+        shakeRange: 3,
+    });
+
+</script>
 
 </html>

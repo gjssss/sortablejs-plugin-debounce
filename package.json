@@ -1,27 +1,45 @@
 {
   "name": "sortablejs-plugin-debounce",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gjssss/sortablejs-plugin-debounce.git"
+  },
+  "description": "A Sortablejs Plugin, to debounce placing when dragging element.",
+  "keywords": [
+    "sortablejs",
+    "javascript",
+    "plugin"
+  ],
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/sortablejs-plugin-debounce.umd.cjs",
+  "homepage": "https://sortablejs-plugin-debounce.vercel.app/",
+  "license": "MIT",
+  "author": "gjssss",
+  "file": [
+    "dist/*.js"
+  ],
+  "main": "./dist/sortablejs-plugin-debounce.umd.js",
   "module": "./dist/sortablejs-plugin-debounce.js",
   "exports": {
     ".": {
       "import": "./dist/sortablejs-plugin-debounce.js",
-      "require": "./dist/sortablejs-plugin-debounce.umd.cjs"
+      "require": "./dist/sortablejs-plugin-debounce.umd.js"
     }
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:es-test": "vite build --config ./test/es/vite.config.js",
-    "preview": "vite preview"
+    "build:preview": "vite build --config ./preview.config.js"
   },
   "devDependencies": {
     "vite": "^4.3.9",
     "sortablejs": "^1.15.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }
