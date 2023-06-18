@@ -1,17 +1,26 @@
 {
   "name": "sortablejs-plugin-debounce",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sortablejs-plugin-debounce.umd.cjs",
+  "module": "./dist/sortablejs-plugin-debounce.js",
+  "exports": {
+    ".": {
+      "import": "./dist/sortablejs-plugin-debounce.js",
+      "require": "./dist/sortablejs-plugin-debounce.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.3.9"
-  },
-  "dependencies": {
+    "vite": "^4.3.9",
     "sortablejs": "^1.15.0"
-  }
+  },
+  "dependencies": {}
 }
